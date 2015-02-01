@@ -1,5 +1,5 @@
-require 'sinatra'
+rquire 'sinatra'
 
 get '/' do
-    'hey this works'
+    'hey this works THE DEPLOY WORKED'
 end
