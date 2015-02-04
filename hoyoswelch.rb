@@ -6,7 +6,7 @@ class HoyosWelch < Sinatra::Base
     register Sinatra::AssetPack
 
     assets do
-        css_dir = 'less'
+        css_dir = 'css'
         serve '/css', from: css_dir
 
         css :base, '/css/base.css', [
