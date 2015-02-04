@@ -10,6 +10,6 @@ server {
     }
 
     location /css {
-        alias /home/hoyoswelch/hoyoswelch/css
+        alias /home/hoyoswelch/hoyoswelch/public/css;
     }
 }
