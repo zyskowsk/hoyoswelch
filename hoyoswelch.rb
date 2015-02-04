@@ -2,7 +2,7 @@ require 'sinatra'
 
 class HoyosWelch < Sinatra::Base
     get '/' do
-        'hey guys.'
+        erb :base
     end
 
     run! if __FILE__ == $0
