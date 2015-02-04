@@ -10,6 +10,6 @@ server {
     }
 
     location /css {
-        alias http://127.0.0.1:3000/css
+        proxy_pass http://127.0.0.1:3000/css
     }
 }
