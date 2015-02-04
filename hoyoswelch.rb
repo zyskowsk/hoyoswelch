@@ -2,7 +2,7 @@ require 'sinatra'
 
 class HoyosWelch < Sinatra::Base
     get '/' do
-        'Did. It.'
+        'hey guys.'
     end
 
     run! if __FILE__ == $0
