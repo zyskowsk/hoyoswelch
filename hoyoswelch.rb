@@ -8,9 +8,9 @@ class HoyosWelch < Sinatra::Base
     register Sinatra::AssetPack
 
     assets {
-        serve '/css',   from: 'public/css'
+        serve '/css',   from: 'less'
 
-        css :application, '/css/base.less', [
+        css :application, [
             '/css/base.css'
         ]
 
