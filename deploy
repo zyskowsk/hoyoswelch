@@ -1,2 +1,2 @@
 #!/bin/bash
-ruby ../deploy_scripts/deploy_project.rb hoyoswelch
+ruby ../deploy_scripts/deploy_project.rb hoyoswelch try_again_less
