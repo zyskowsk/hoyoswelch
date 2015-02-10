@@ -15,6 +15,7 @@ class HoyosWelch < Sinatra::Base
         ]
 
         css_compression :less
+        prequild true
     }
 
 
