@@ -5,7 +5,7 @@ require 'data_mapper'
 require 'dm-mysql-adapter'
 require 'json'
 
-DataMapper.setup(:default, 'mysql://root:seattle@localhost/hoyoswelch')
+DataMapper.setup(:default, 'mysql://root@localhost/hoyoswelch')
 class Guest
     include DataMapper::Resource
     property :id,         Serial
