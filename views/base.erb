@@ -100,7 +100,40 @@
             </div>
         </div>
         <div class="section barn"></div>
-        <div id="section_rsvp" class="section rsvp"></div>
+        <div id="section_rsvp" class="section rsvp">
+            <form method="post" action="/guests">
+                <div class="block">
+                    <label for="name" class="name">My name is</label>
+                    <input type="text" id="name" name="name" /></br>
+                </div>
+
+                <div class="block"
+                    <label for="num_guests" class="num_guests">I am bringing</label>
+                    <input type="number" id="num_guests" name="num_guests" />
+                    <label for="num_guests" class="num_guests">guests</label><br>
+                </div>
+
+                <div class="block">
+                    <label for="attending_yes" class="attending_yes">See you there</label>
+                    <input type="radio" id="attending_yes" value="true"  name="attending" /></br>
+
+                    <label for="attending_no" class="attending_no">Can't make it</label>
+                    <input type="radio" id="attending_no" value="false"  name="attending" /></br>
+                </div>
+
+                <div class="block">
+                    <label for="songs" class="songs">Song suggestions</label></br>
+                    <textarea id="songs" name="songs"></textarea></br>
+                </div>
+
+                <div class="block">
+                    <label for="advice" class="advice">Advice for us</label></br>
+                    <textarea id="advice" name="advice"></textarea></br>
+                </div>
+
+                <input type="submit" class="submit">
+            </form>
+        </div>
         <div id="section_registry" class="section registry"></div>
     </body>
 </html>
