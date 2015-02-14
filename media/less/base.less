@@ -1,13 +1,100 @@
-body {
-    .banner {
-        height: 200px;
-        background: rgba(127, 140, 154, 0.5);
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+}
 
-        .date {
-            font-size: 30px;
+.section {
+
+    &.welcome {
+        background: url('/images/welcome.png') no-repeat;
+        background-size: cover;
+        height: 1155px;
+        width: 100%;
+
+        .banner {
+            @media (max-width: 800px) {height: 150px;}
+            position: absolute;
+            width: 100%;
+            height: 300px;
+            background: url('/images/nick_ana.png') no-repeat center;
+            background-color: rgba(134, 148, 169, 0.8);
+            background-size: 100%;
+        }
+
+    }
+
+    &.field {
+        background: url('/images/field.png') no-repeat;
+        background-size: cover;
+        height: 2000px;
+        width: 100%;
+
+        .nav {
+            @media (max-width: 800px) {
+                font-size: 20px;
+            }
+            @media (min-width: 800px) and ( max-width: 1200px) {
+                font-size: 30px;
+            }
+            position: absolute;
+            width: 100%;
+            padding: 20px 0;
+            background-color: rgba(134, 148, 169, 0.8);
+            color: #ffde17;
+            font-size: 40px;
             font-weight: bold;
-            .circle {
+            text-align: center;
+
+            .nav_elem {
+                @media (max-width: 800px) {
+                    padding: 0 30px;
+                }
+                @media (min-width: 800px) and ( max-width: 1200px) {
+                    padding: 0 85px;
+                }
                 display: inline-block;
+                padding: 0 130px;
+                cursor: pointer;
+
+                &:hover {
+                    color: #e5c609;
+                }
+            }
+        }
+    }
+
+    &.wedding {
+        border-left: 100px solid  #c4350e;
+        box-shadow: inset 40px 0px #ffde17;
+        padding: 20px 80px;
+
+        .info {
+            color: #687994;
+            font-size: 18px;
+            a {
+                color: #2594B5;
+                text-decoration: none;
+                &:hover {
+                    color: #374253;
+                }
+             }
+            .block {
+                padding-top: 20px;
+
+                .header {
+                    font-size: 25px;
+                    font-weight: bold;
+
+                    &.sub {
+                        font-size: 20px;
+                    }
+                }
+
+                .content {
+                    padding-top: 2px;
+                }
             }
         }
     }

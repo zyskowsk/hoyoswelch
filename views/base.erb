@@ -5,16 +5,95 @@
         <%= css :application %>
     </head>
     <body>
-        <div class="banner">
-            <div class="hero"></div>
-            <div class="date">
-                7 <div class="circle"></div>11<div class="circle"></div>15
+        <div class="section welcome">
+            <div class="banner">
+                <div class="hero"></div>
             </div>
         </div>
+        <div class="section field">
+            <div class="nav">
+                <div class="nav_elem">wedding</div>
+                <div class="nav_elem">rsvp</div>
+                <div class="nav_elem">registry</div>
+            </div>
+        </div>
+        <div id="section_wedding" class="section wedding">
+            <div class="info">
+                <div class="block">
+                    <div class="header">Venue</div>
+                    <div class="content">
+                        We are getting married at Mabee Farm in Rotterdam Junction, NY
+                    </div>
+                </div>
 
-        <form method="post" action="/thank-you">
-            <input type="text" name="name"></input>
-            <input type="submit"></input>
-        </form>
+                <div class="block">
+                    <div class="header sub">
+                        <a href="http://schenectadyhistorical.org/mabee-farm/">Mabee Farm</a>
+                    </div>
+                    <div class="content">
+                        1080 Main Street</br>
+                        Rotterdam Junction, NY 12150</br>
+                    </div>
+                </div>
+
+                <div class="block">
+                    <div class="content">
+                        Ceremony will begin at 4:30 pm with a reception and dinner to follow.
+                    </div>
+                </div>
+
+                <div class="block">
+                    <div class="header">hotel</div>
+                    <div class="content">
+                        There are three hotels we recommend within walking distance of downtown Saratoga Springs.  Mabee Farm is about 25 miles from Saratoga.
+                    </div>
+                </div>
+
+                <div class="block">
+                    <div class="header sub">
+                        <a href="http://goo.gl/9Ka8EM">Saratoga Hampton Inn</a>
+                    </div>
+                    <div class="content">
+                        25 Lake Avenue</br>
+                        Saratoga Springs, NY 12866</br>
+                        (518) 584-2100
+                    </div>
+                </div>
+
+                <div class="block">
+                    <div class="header sub">
+                        <a href="http://goo.gl/zZcZVm">The Saratoga Hilton</a>
+                    </div>
+                    <div class="content">
+                        534 Broadway</br>
+                        Saratoga Springs, NY 12866</br>
+                        (518) 584-4000
+                    </div>
+                </div>
+
+                <div class="block">
+                    <div class="header sub">
+                        <a href="http://goo.gl/h19F14">Saratoga Holiday Inn</a>
+                    </div>
+                    <div class="content">
+                        232 Broadway</br>
+                        Saratoga Springs, NY 12866</br>
+                        (518) 584-4550
+                    </div>
+                </div>
+
+                <div class="block">
+                    <div class="header">things to do</div>
+                    <div class="content">
+                        Go for a run in <a href="http://www.nyparks.com/parks/saratogaspa">Saratoga Spa State Park</a></br>
+                        Drink from one of the 18 <a href="http://www.saratoga.com/guid/health-mineral-springs.cfm">mineral springs</a> throughout Saratoga</br>
+                        Take a walk through <a href="http://www.saratoga.com/hotspot_congress-park.cfm">Congress Park</a></br>
+                        Visit the <a href="https://www.racingmuseum.org">National Museum of Racing</a> or the <a href="http://www.saratogaautomuseum.org">National Museum of Racing</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section barn"></div>
+        <div id="section_rsvp" class="section rsvp"></div>
     </body>
 </html>
