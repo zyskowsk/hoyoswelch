@@ -8,7 +8,7 @@ server {
     }
 
     location /images {
-        alias /home/hoyoswelch/hoyoswelch/media/images;
+        alias /home/hoyoswelch/hoyoswelch/public/images;
     }
 
     location / {
