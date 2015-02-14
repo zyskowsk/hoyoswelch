@@ -1,2 +1,2 @@
-require './hoyoswelch.rb'
-run HoyosWelch
+require './app.rb'
+run App

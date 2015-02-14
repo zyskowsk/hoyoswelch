@@ -4,7 +4,14 @@ require 'less'
 require 'data_mapper'
 require 'json'
 
-DataMapper.setup(:default, 'mysql://root:seattle@localhost/hoyoswelch')
+
+MYSQL_PW=''
+if ENV['TEST_ENV'] == 'prod'
+    MYSQL_PW = ':seattle';
+end
+
+DataMapper.setup(:default, "mysql://root#{MYSQL_PW}@localhost/hoyoswelch")
+
 class Guest
     include DataMapper::Resource
     property :id,         Serial
@@ -13,13 +20,14 @@ class Guest
 end
 DataMapper.auto_migrate!
 
-class HoyosWelch < Sinatra::Base
+class App < Sinatra::Base
     set :root, File.dirname(__FILE__)
 
     register Sinatra::AssetPack
 
     assets {
-        serve '/css',   from: 'less'
+        serve '/css',   from: 'media/less'
+        serve '/images', from: 'media/images'
 
         css :application, [
             '/css/base.css'
