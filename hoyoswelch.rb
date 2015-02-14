@@ -2,7 +2,6 @@ require 'sinatra'
 require 'sinatra/assetpack'
 require 'less'
 require 'data_mapper'
-require 'dm-mysql-adapter'
 require 'json'
 
 DataMapper.setup(:default, 'mysql://root:seattle@localhost/hoyoswelch')

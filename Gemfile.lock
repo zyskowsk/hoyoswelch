@@ -55,7 +55,7 @@ GEM
       dm-core (~> 1.2.0)
     do_mysql (0.10.14)
       data_objects (= 0.10.14)
-    eventmachine (1.0.6)
+    eventmachine (1.0.7)
     fastercsv (1.5.5)
     jsmin (1.0.1)
     json (1.8.2)
