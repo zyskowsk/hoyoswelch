@@ -1,6 +1,6 @@
 # Rakefile
 
-APP_FILE = 'hoyoswelch.rb'
-APP_CLASS = 'HoyosWelch'
+APP_FILE = 'app.rb'
+APP_CLASS = 'App'
 
 require 'sinatra/assetpack/rake'
