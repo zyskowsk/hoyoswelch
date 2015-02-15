@@ -19,9 +19,11 @@ $(function () {
     // Scroll to section
     $('.nav_elem').click(function (event) {
         var id = $(event.target).attr('href');
+
+        event.preventDefault();
         $('html, body').animate({
             scrollTop: ($(id).offset().top - (2 * $nav.height()))
-        }, 300);
+        }, 800);
     });
 
 
