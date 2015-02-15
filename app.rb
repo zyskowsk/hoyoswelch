@@ -19,10 +19,10 @@ class Guest
     property :num_guests, Integer
     property :attending,  Boolean
     property :advice,     Text
-    property :songs,      Text
     property :created_at, DateTime
 
     has n, :plus_ones
+    has n, :songs
 end
 
 class PlusOne
@@ -32,6 +32,15 @@ class PlusOne
 
     belongs_to :guest
 end
+
+class Song
+    include DataMapper::Resource
+    property :id,   Serial
+    property :name, String
+
+    belongs_to :guest
+end
+
 DataMapper.auto_migrate!
 
 class App < Sinatra::Base
@@ -71,15 +80,25 @@ class App < Sinatra::Base
             :attending => params['attending'],
             :num_guests => params['num_guests'],
             :advice => params['advice'],
-            :songs => params['songs'],
             :created_at => Time.now
         )
 
-        params['plus_ones'].each do |name|
-            PlusOne.create(
-                :name => name,
-                :guest => @guest
-            )
+        if params['plus_ones']
+            params['plus_ones'].each do |name|
+                PlusOne.create(
+                    :name => name,
+                    :guest => @guest
+                )
+            end
+        end
+
+        if params['songs']
+            params['songs'].each do |name|
+                Song.create(
+                    :name => name,
+                    :guest => @guest
+                )
+            end
         end
 
         erb :thank_you, :locals => {:name => params['name']}

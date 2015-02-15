@@ -104,7 +104,10 @@
         </div>
         <div class="section barn"></div>
         <div id="section_rsvp" class="section rsvp">
-            <form method="post" action="/submit">
+            <div class="flash">
+                Form incomplete. Please give us your name and whether or not you will be attending the wedding
+            </div>
+            <form id="rsvp_form"  method="post" action="/submit">
                 <div class="block">
                     <label for="name" class="name">My name is</label>
                     <input type="text" id="name" name="name" /></br>
@@ -112,11 +115,16 @@
 
                 <div class="block"
                     <label for="num_guests" class="num_guests">I am bringing</label>
-                    <input type="number" min="0" max="10" id="num_guests" name="num_guests" />
+                    <input type="number" min="0" max="10" value="1" id="num_guests" name="num_guests" />
                     <label for="num_guests" class="num_guests">guests</label><br>
                 </div>
 
-                <div class="guest_names_container"></div>
+                <div class="guest_names_container">
+                    <div class="block">
+                        <label for="plus_one_name_" class="plus_one_name">Guest name</label>
+                        <input type="text" id="plus_one_name" name="plus_ones[]" />
+                    </div>
+                </div>
 
                 <div class="block">
                     <label for="attending_yes" class="attending_yes">See you there</label>
@@ -126,9 +134,11 @@
                     <input type="radio" id="attending_no" value="false"  name="attending" /></br>
                 </div>
 
-                <div class="block">
-                    <label for="songs" class="songs">Song suggestions</label></br>
-                    <textarea id="songs" name="songs"></textarea></br>
+                <label>Suggest a song</label><button class="add_song">+</button>
+                <div class="songs_container">
+                    <div class="block">
+                        <input type="text" id="song_name" name="songs[]" />
+                    </div>
                 </div>
 
                 <div class="block">
