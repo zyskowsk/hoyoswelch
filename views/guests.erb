@@ -1,3 +1,14 @@
 <% guests.each do |guest| %>
-    <div><%=guest.name%></div>
+    <div>guest name: <%=guest.name%></div>
+    <div>attending: <%=guest.attending%></div>
+    <div>number of guests: <%=guest.num_guests%></div>
+    <div>advice: <%=guest.advice%></div>
+    <div>songs: <%=guest.songs%></div>
+
+    <div>Plus ones:<div>
+    <% guest.plus_ones.each do |plus_one| %>
+        <div><%=plus_one.name%></div>
+    <% end %>
+
+    <div>--------------------------------------------------</div>
 <% end %>

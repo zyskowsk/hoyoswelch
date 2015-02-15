@@ -11,6 +11,10 @@ server {
         alias /home/hoyoswelch/hoyoswelch/public/images;
     }
 
+    location /js {
+        alias /home/hoyoswelch/hoyoswelch/public/js;
+    }
+
     location / {
         proxy_http_version 1.1;
         proxy_pass http://127.0.0.1:3000;
