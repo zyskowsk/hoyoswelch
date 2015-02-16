@@ -40,7 +40,7 @@ html, body {
             }
             position: absolute;
             width: 100%;
-            padding: 20px 0;
+            padding: 15px 0;
             background-color: rgba(50, 77, 118, 0.9);
             color: #ffde17;
             font-size: 40px;
@@ -64,7 +64,7 @@ html, body {
                 }
 
                 &:hover {
-                    color: #efefef;
+                    color: #dfdfdf;
                 }
             }
         }
@@ -122,32 +122,38 @@ html, body {
         font-weight: bold;
         padding: 60px;
 
+        .header {
+            font-size: 45px;
+            font-weight: bolder;
+            margin-bottom: 15px;
+            border-bottom: 2px solid rgb(242, 204, 55);
+        }
+
         .flash {
             display: none;
             text-align: center;
-            border: 1px solid rgb(223, 82, 82);
+            border: 1px solid #E0AE6B;
             padding: 15px;
-            background: orange;
-            color: rgb(179, 84, 84);
-        }
-
-        form {
-            margin-top: 20px
+            background: rgba(252, 200, 64, 0.55);
+            color: rgb(54, 80, 110);
         }
 
         label {
             margin-right: 5px;
             padding-bottom: 5px;
+            &.attending_yes { margin-right: 0px; }
+            &.attending_no { margin-right: 0px; }
         }
 
-        input {
+        textarea, input {
             color: #687994;
             outline: none;
             margin-right: 5px;
             padding: 1px 5px;
+            border: 1px solid #dfdfdf;
 
             &#attending_yes {
-                margin-right: 15px;
+                margin-right: 10px;
             }
 
             &.first_song {
