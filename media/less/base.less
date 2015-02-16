@@ -40,9 +40,9 @@ html, body {
             }
             position: absolute;
             width: 100%;
-            padding: 15px 0;
+            padding: 20px 0;
             background-color: rgba(50, 77, 118, 0.9);
-            color: #ffde17;
+            color: #F2CC37;
             font-size: 40px;
             font-weight: bold;
             text-align: center;
@@ -64,7 +64,7 @@ html, body {
                 }
 
                 &:hover {
-                    color: #dfdfdf;
+                    color: #efefef;
                 }
             }
         }
@@ -76,29 +76,34 @@ html, body {
             box-shadow: inset 20px 0px #ffde17;
             padding: 20px 60px;
         }
-        border-left: 100px solid  #c4350e;
-        box-shadow: inset 40px 0px #ffde17;
+        border-left: 100px solid #353A56;
+        box-shadow: inset 40px 0px rgba(242, 204, 55, 0.8);
         padding: 20px 80px;
 
         .info {
             color: #687994;
             font-size: 18px;
             a {
-                color: #2594B5;
+                color: #425066;
                 text-decoration: none;
+                font-weight: bold;
                 &:hover {
-                    color: #374253;
+                    color: #979DA6;
                 }
              }
             .block {
                 padding-top: 20px;
 
                 .header {
-                    font-size: 25px;
+                    font-size: 30px;
                     font-weight: bold;
+                    border-bottom: 1px solid rgb(242, 204, 55);
+                    margin-bottom: 10px;
 
                     &.sub {
                         font-size: 20px;
+                        border-bottom: none;
+                        margin-bottom: 0px;
                     }
                 }
 
@@ -136,6 +141,7 @@ html, body {
             padding: 15px;
             background: rgba(252, 200, 64, 0.55);
             color: rgb(54, 80, 110);
+            margin-bottom: 20px;
         }
 
         label {
@@ -151,6 +157,10 @@ html, body {
             margin-right: 5px;
             padding: 1px 5px;
             border: 1px solid #dfdfdf;
+
+            &#num_guests {
+                padding-right: 0px;
+            }
 
             &#attending_yes {
                 margin-right: 10px;
@@ -173,6 +183,7 @@ html, body {
             &.submit {
                 padding: 5px 10px;
                 font-size: 15px;
+                font-weight: bold;
                 border-radius: 1px;
             }
 
@@ -197,6 +208,9 @@ html, body {
 
         .plus_one_name {
             margin-left: 20px;
+            &.first {
+                margin-right: 0px;
+            }
         }
 
         .block {

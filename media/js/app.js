@@ -31,7 +31,7 @@ $(function () {
 
         event.preventDefault();
         $('html, body').animate({
-            scrollTop: ($(id).offset().top - (2 * $nav.height()))
+            scrollTop: $(id).offset().top - (2 * $nav.height())
         }, 800);
     });
 
@@ -39,13 +39,19 @@ $(function () {
     // Plus one input
     $('#num_guests').change(function (event) {
         var $guest_names_container = $('.guest_names_container');
-        var val = $(event.target).val();
+        var val = parseInt($(event.target).val(), 10);
         var num_guests = function () { return $guest_names_container.find('.block').length; }
         var prototype = '' +
             '<div class="block">' +
                 '<label for="plus_one_name" class="plus_one_name">Guest name</label>' +
                 '<input type="text" id="plus_one_name" name="plus_ones[]" />' +
             '</div>'
+
+        if (val === 1) {
+            $('.guests_copy').html('guest');
+        } else {
+            $('.guests_copy').html('guests');
+        }
 
         if (val > num_guests()) {
             while (num_guests() < val) {
