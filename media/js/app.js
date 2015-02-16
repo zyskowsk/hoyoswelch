@@ -43,7 +43,7 @@ $(function () {
         var num_guests = function () { return $guest_names_container.find('.block').length; }
         var prototype = '' +
             '<div class="block">' +
-                '<label for="plus_one_name_" class="plus_one_name">Guest name</label>' +
+                '<label for="plus_one_name" class="plus_one_name">Guest name</label>' +
                 '<input type="text" id="plus_one_name" name="plus_ones[]" />' +
             '</div>'
 
@@ -73,7 +73,7 @@ $(function () {
         var prototype = '' +
             '<div class="block">' +
                 '<input type="text" id="song_name" name="songs[]" />' +
-                '<button class="remove_song">-</button>' +
+                '<button class="remove_song">x</button>' +
             '</div>'
 
         $song_container.append(prototype);

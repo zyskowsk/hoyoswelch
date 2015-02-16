@@ -113,6 +113,14 @@
                     <input type="text" id="name" name="name" /></br>
                 </div>
 
+                <div class="block">
+                    <label for="attending_yes" class="attending_yes">See you there</label>
+                    <input type="radio" id="attending_yes" value="true"  name="attending" />
+
+                    <label for="attending_no" class="attending_no">Can't make it</label>
+                    <input type="radio" id="attending_no" value="false"  name="attending" /></br>
+                </div>
+
                 <div class="block"
                     <label for="num_guests" class="num_guests">I am bringing</label>
                     <input type="number" min="0" max="10" value="1" id="num_guests" name="num_guests" />
@@ -126,18 +134,11 @@
                     </div>
                 </div>
 
-                <div class="block">
-                    <label for="attending_yes" class="attending_yes">See you there</label>
-                    <input type="radio" id="attending_yes" value="true"  name="attending" /></br>
-
-                    <label for="attending_no" class="attending_no">Can't make it</label>
-                    <input type="radio" id="attending_no" value="false"  name="attending" /></br>
-                </div>
-
-                <label>Suggest a song</label><button class="add_song">+</button>
+                <label>Suggest a song</label>
                 <div class="songs_container">
                     <div class="block">
-                        <input type="text" id="song_name" name="songs[]" />
+                        <input type="text" id="song_name" class="first_song" name="songs[]" />
+                        <button class="add_song">+</button>
                     </div>
                 </div>
 

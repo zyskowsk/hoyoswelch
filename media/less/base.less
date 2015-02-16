@@ -19,7 +19,7 @@ html, body {
             width: 100%;
             height: 300px;
             background: url('/images/nick_ana.png') no-repeat center;
-            background-color: rgba(134, 148, 169, 0.8);
+            background-color: rgba(50, 77, 118, 0.9);
             background-size: 100%;
         }
 
@@ -41,7 +41,7 @@ html, body {
             position: absolute;
             width: 100%;
             padding: 20px 0;
-            background-color: rgba(134, 148, 169, 0.8);
+            background-color: rgba(50, 77, 118, 0.9);
             color: #ffde17;
             font-size: 40px;
             font-weight: bold;
@@ -64,7 +64,7 @@ html, body {
                 }
 
                 &:hover {
-                    color: #e5c609;
+                    color: #efefef;
                 }
             }
         }
@@ -133,6 +133,64 @@ html, body {
 
         form {
             margin-top: 20px
+        }
+
+        label {
+            margin-right: 5px;
+            padding-bottom: 5px;
+        }
+
+        input {
+            color: #687994;
+            outline: none;
+            margin-right: 5px;
+            padding: 1px 5px;
+
+            &#attending_yes {
+                margin-right: 15px;
+            }
+
+            &.first_song {
+                margin-right: 0px;
+            }
+        }
+
+        input[type="submit"], button {
+            cursor: pointer;
+            border: 1px solid #687994;
+            color: #687994;
+            border-radius: 10px;
+            background: white;
+            padding: 0px 4px 2px 4px;
+            outline: none;
+
+            &.submit {
+                padding: 5px 10px;
+                font-size: 15px;
+                border-radius: 1px;
+            }
+
+            &:hover {
+                background: rgb(244, 244, 244);
+                color: #2E3F59;
+                border-color: #2E3F59;
+            }
+
+            &:active {
+                color: #2E3F59;
+                border-color: #2E3F59;
+                background: white;
+                outline: none;
+            }
+        }
+
+        .songs_container {
+            padding-top: 10px;
+        }
+
+
+        .plus_one_name {
+            margin-left: 20px;
         }
 
         .block {
