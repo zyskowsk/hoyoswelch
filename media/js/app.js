@@ -11,20 +11,6 @@ $(function () {
         return name && (attending_yes || attending_no)
     }
 
-    // Sticky navbar
-    $(window).scroll(function (event) {
-        if ($(this).scrollTop() > $welcome.height() && $nav.css('position') !== 'fixed') {
-            $nav.css({
-                position: 'fixed',
-                top: '0px'
-            });
-        } else if ($(this).scrollTop() < $welcome.height() && $nav.css('position') === 'fixed') {
-            $nav.css({
-                position: 'static'
-            });
-        }
-    });
-
     // Plus one input
     $('#num_guests').change(function (event) {
         var $guest_names_container = $('.guest_names_container');
