@@ -3,6 +3,9 @@ $(function () {
     var $welcome = $('.section.welcome');
     var $rsvp_form = $('#rsvp_form');
 
+    $('.section').hide();
+    $('.section.welcome').show();
+
     function validate_form() {
         var name = $rsvp_form.find('#name').val()
         var attending_yes = $rsvp_form.find('#attending_yes').is(':checked');
