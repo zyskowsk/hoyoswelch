@@ -8,25 +8,18 @@
         <%= css :app %>
     </head>
     <body>
-        <div class="section welcome">
-            <div class="banner">
-                <div class="hero"></div>
-            </div>
+        <div id="section_wedding" class="section wedding">
             <div class="nav">
                 <div class="nav_elem">
-                    <a href="#section_wedding">wedding</a>
+                    <a href="/wedding">wedding</a>
                 </div>
                 <div class="nav_elem">
-                    <a href="#section_rsvp">rsvp</a>
+                    <a href="/rsvp">rsvp</a>
                 </div>
                 <div class="nav_elem">
-                    <a href="#section_registry">registry</a>
+                    <a href="/registry">registry</a>
                 </div>
             </div>
-        </div>
-        <div class="section field">
-        </div>
-        <div id="section_wedding" class="section wedding">
             <div class="info">
                 <div class="block">
                     <div class="header">Venue</div>
@@ -102,55 +95,5 @@
                 </div>
             </div>
         </div>
-        <div class="section barn"></div>
-        <div id="section_rsvp" class="section rsvp">
-            <div class="flash">
-                Please give us your name and whether or not you will be attending the wedding
-            </div>
-            <form id="rsvp_form"  method="post" action="/submit">
-                <div class="header">RSVP</div>
-                <div class="block">
-                    <label for="name" class="name">My name is</label>
-                    <input type="text" id="name" name="name" /></br>
-                </div>
-
-                <div class="block">
-                    <label for="attending_yes" class="attending_yes">See you there</label>
-                    <input type="radio" id="attending_yes" value="true"  name="attending" />
-
-                    <label for="attending_no" class="attending_no">Can't make it</label>
-                    <input type="radio" id="attending_no" value="false"  name="attending" /></br>
-                </div>
-
-                <div class="block"
-                    <label for="num_guests" class="num_guests">I am bringing</label>
-                    <input type="number" min="0" max="10" value="1" id="num_guests" name="num_guests" />
-                    <label for="num_guests" class="num_guests guests_copy">guest</label><br>
-                </div>
-
-                <div class="guest_names_container">
-                    <div class="block">
-                        <label for="plus_one_name_" class="plus_one_name first">Guest name</label>
-                        <input type="text" id="plus_one_name" name="plus_ones[]" />
-                    </div>
-                </div>
-
-                <label>Suggest a song</label>
-                <div class="songs_container">
-                    <div class="block">
-                        <input type="text" id="song_name" class="first_song" name="songs[]" />
-                        <button class="add_song">+</button>
-                    </div>
-                </div>
-
-                <div class="block">
-                    <label for="advice" class="advice">Advice for us</label></br>
-                    <textarea id="advice" name="advice"></textarea></br>
-                </div>
-
-                <input type="submit" class="submit">
-            </form>
-        </div>
-        <div id="section_registry" class="section registry"></div>
     </body>
 </html>

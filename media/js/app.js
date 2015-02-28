@@ -3,9 +3,6 @@ $(function () {
     var $welcome = $('.section.welcome');
     var $rsvp_form = $('#rsvp_form');
 
-    $('.section').hide();
-    $('.section.welcome').show();
-
     function validate_form() {
         var name = $rsvp_form.find('#name').val()
         var attending_yes = $rsvp_form.find('#attending_yes').is(':checked');
@@ -27,17 +24,6 @@ $(function () {
             });
         }
     });
-
-    // Scroll to section
-    $('.nav_elem').click(function (event) {
-        var id = $(event.target).attr('href');
-
-        event.preventDefault();
-        $('html, body').animate({
-            scrollTop: $(id).offset().top - (2 * $nav.height())
-        }, 800);
-    });
-
 
     // Plus one input
     $('#num_guests').change(function (event) {

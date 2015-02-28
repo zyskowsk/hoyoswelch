@@ -67,7 +67,19 @@ class App < Sinatra::Base
 
 
     get '/' do
-        erb :base
+        erb :welcome
+    end
+
+    get '/wedding' do
+        erb :wedding
+    end
+
+    get '/rsvp' do
+        erb :rsvp
+    end
+
+    get '/registry' do
+        erb :registry
     end
 
     get '/guests' do
