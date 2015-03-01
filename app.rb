@@ -19,6 +19,7 @@ class Guest
     property :num_guests, Integer
     property :attending,  Boolean
     property :advice,     Text
+    property :location,   String
     property :created_at, DateTime
 
     has n, :plus_ones
@@ -86,12 +87,20 @@ class App < Sinatra::Base
         erb :guests, :locals => {:guests => Guest.all}
     end
 
+    get '/locations' do
+        content_type :json
+        Guest.all.map do |guest|
+            guest.location
+        end.to_json
+    end
+
     post '/submit' do
         @guest = Guest.create(
             :name => params['name'],
             :attending => params['attending'],
             :num_guests => params['num_guests'],
             :advice => params['advice'],
+            :location => params['location'],
             :created_at => Time.now
         )
 

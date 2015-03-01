@@ -64,5 +64,42 @@ $(function () {
         });
     });
 
+    function add_locations(map) {
+        $.get('/locations', function (response) {
+            response.forEach(function (location) {
+                latlng = location.replace(/[()\ ]/g, '').split(',');
+                new google.maps.Marker({
+                    map:map,
+                    icon: 'http://maps.google.com/mapfiles/ms/icons/blue-dot.png',
+                    position: new google.maps.LatLng(parseFloat(latlng[0]), parseFloat(latlng[1]))
+                });
+            });
+        });
+    }
 
+    function initialize_map() {
+        var mapCanvas = document.getElementById('map');
+        var latlng = $('.latlng');
+        var middle_of_usa = new google.maps.LatLng(37.09024, -95.712891);
+        var mapOptions = {
+            center: middle_of_usa,
+            zoom: 4,
+            mapTypeId: google.maps.MapTypeId.ROADMAP
+        }
+        var map = new google.maps.Map(mapCanvas, mapOptions);
+        var marker = new google.maps.Marker({
+            map:map,
+            draggable: true,
+            title: 'Where are you from?',
+            position: middle_of_usa
+        });
+
+        google.maps.event.addListener(marker, 'dragend', function() {
+            latlng.val(this.getPosition().toString());
+        });
+
+        add_locations(map);
+    }
+
+    google.maps.event.addDomListener(window, 'load', initialize_map);
 });
