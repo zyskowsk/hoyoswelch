@@ -5,43 +5,6 @@ html, body {
     width: 100%;
 }
 
-.nav {
-    @media (max-width: 800px) {
-        font-size: 20px;
-    }
-    @media (min-width: 800px) and ( max-width: 1200px) {
-        font-size: 30px;
-    }
-    width: 100%;
-    padding: 20px 0;
-    background-color: rgba(50, 77, 118, 0.9);
-    color: #F2CC37;
-    font-size: 40px;
-    font-weight: bold;
-    text-align: center;
-
-    .nav_elem {
-        @media (max-width: 800px) {
-            padding: 0 30px;
-        }
-        @media (min-width: 800px) and ( max-width: 1200px) {
-            padding: 0 85px;
-        }
-        display: inline-block;
-        padding: 0 130px;
-        cursor: pointer;
-
-        a {
-            color: inherit;
-            text-decoration: none;
-        }
-
-        &:hover {
-            color: #efefef;
-        }
-    }
-}
-
 .section {
 
     &.welcome {
@@ -179,24 +142,53 @@ html, body {
         }
     }
 
-    &.barn {
-        background: url('/images/barn.jpg') no-repeat center;
-        background-size: cover;
-        height: 1000px;
-        width: 100%;
-    }
-
     &.rsvp {
-        color: #687994;
+        color: white;
         font-size: 20px;
         font-weight: bold;
-        padding: 60px;
+        background-color: rgba(131, 144, 165, 0.9);
 
-        .header {
-            font-size: 45px;
-            font-weight: bolder;
-            margin-bottom: 15px;
-            border-bottom: 2px solid rgb(242, 204, 55);
+        .nav {
+            @media (max-width: 800px) {
+                font-size: 20px;
+            }
+            @media (min-width: 800px) and ( max-width: 1200px) {
+                font-size: 30px;
+            }
+            width: 100%;
+            padding: 20px 0;
+            color: #F2CC37;
+            font-size: 40px;
+            font-weight: bold;
+            text-align: center;
+
+            .nav_elem {
+                @media (max-width: 800px) {
+                    padding: 0 30px;
+                }
+                @media (min-width: 800px) and ( max-width: 1200px) {
+                    padding: 0 85px;
+                }
+                display: inline-block;
+                padding: 0 130px;
+                cursor: pointer;
+
+                a {
+                    color: inherit;
+                    text-decoration: none;
+                }
+
+                &:hover {
+                    color: #efefef;
+                }
+            }
+        }
+
+        .barn {
+            background: url('/images/barn.jpg') no-repeat center;
+            background-size: cover;
+            height: 1000px;
+            width: 100%;
         }
 
         .flash {
@@ -205,89 +197,101 @@ html, body {
             border: 1px solid #E0AE6B;
             padding: 15px;
             background: rgba(252, 200, 64, 0.55);
-            color: rgb(54, 80, 110);
+            color: white;
             margin-bottom: 20px;
         }
 
-        label {
-            margin-right: 5px;
-            padding-bottom: 5px;
-            &.attending_yes { margin-right: 0px; }
-            &.attending_no { margin-right: 0px; }
-        }
+        #rsvp_form {
+            padding: 60px;
 
-        textarea, input {
-            color: #687994;
-            outline: none;
-            margin-right: 5px;
-            padding: 3px 5px;
-            border: 1px solid #dfdfdf;
-
-            &#num_guests {
-                padding-right: 0px;
+            label {
+                margin-right: 5px;
+                padding-bottom: 5px;
+                &.attending_yes { margin-right: 0px; }
+                &.attending_no { margin-right: 0px; }
             }
 
-            &#attending_yes {
-                margin-right: 10px;
-            }
 
-            &.first_song {
-                margin-right: 0px;
-            }
-        }
-
-        input[type="submit"], button {
-            cursor: pointer;
-            border: 1px solid #687994;
-            color: #687994;
-            border-radius: 10px;
-            background: white;
-            padding: 0px 4px 2px 4px;
-            outline: none;
-
-            &.submit {
-                padding: 5px 10px;
-                font-size: 15px;
-                font-weight: bold;
-                border-radius: 1px;
-            }
-
-            &:hover {
-                background: rgb(244, 244, 244);
-                color: #2E3F59;
-                border-color: #2E3F59;
-            }
-
-            &:active {
-                color: #2E3F59;
-                border-color: #2E3F59;
-                background: white;
+            textarea, input {
+                color: white;
                 outline: none;
+                margin-right: 5px;
+                padding: 3px 5px;
+                border: 1px solid #dfdfdf;
+                background-color: transparent;
+                font-size: 15px;
+
+                &#num_guests {
+                    padding-right: 0px;
+                }
+
+                &#attending_yes {
+                    margin-right: 10px;
+                }
+
+                &.first_song {
+                    margin-right: 0px;
+                }
             }
-        }
 
-        .songs_container {
-            padding-top: 10px;
-        }
-
-
-        .plus_one_name {
-            margin-left: 20px;
-            &.first {
-                margin-right: 0px;
+            input {
+                border: none;
+                border-bottom: 1px solid #dfdfdf;
             }
-        }
 
-        .block {
-            padding-bottom: 20px;
-        }
+            input[type="submit"], button {
+                cursor: pointer;
+                border: 1px solid #687994;
+                color: #687994;
+                border-radius: 10px;
+                background: white;
+                padding: 0px 4px 2px 4px;
+                outline: none;
 
-        textarea {
-            margin-top: 10px;
-            padding: 5px;
-            width: 100%;
-            height: 80px;
-            resize: none;
+                &.submit {
+                    padding: 5px 10px;
+                    font-size: 15px;
+                    font-weight: bold;
+                    border-radius: 1px;
+                }
+
+                &:hover {
+                    background: rgb(244, 244, 244);
+                    color: #2E3F59;
+                    border-color: #2E3F59;
+                }
+
+                &:active {
+                    color: #2E3F59;
+                    border-color: #2E3F59;
+                    background: white;
+                    outline: none;
+                }
+            }
+
+            .songs_container {
+                padding-top: 10px;
+            }
+
+
+            .plus_one_name {
+                margin-left: 20px;
+                &.first {
+                    margin-right: 0px;
+                }
+            }
+
+            .block {
+                padding-bottom: 20px;
+            }
+
+            textarea {
+                margin-top: 10px;
+                padding: 5px;
+                width: 100%;
+                height: 80px;
+                resize: none;
+            }
         }
     }
 }
