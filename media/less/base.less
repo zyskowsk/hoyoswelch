@@ -19,54 +19,59 @@ html, body {
         padding: 15px;
         text-align: center;
 
-        .hero {
-            background: url('/images/hero.png') no-repeat center;
-            height:115px;
-            width:500px;
-            background-size: 100%;
-            float: left;
-            display: block;
-        }
+        .width_wrapper {
+            max-width: 1500px;
+            margin: 0px auto;
 
-        .nav_elems {
-            float: right;
-
-            .nav_elem {
-                padding: 5px 0;
+            .hero {
+                background: url('/images/hero.png') no-repeat center;
+                height:115px;
+                width:500px;
+                background-size: 100%;
+                float: left;
                 display: block;
+            }
 
-                &.wedding {
-                    background: url('/images/wedding_yellow.png') no-repeat center;
-                    background-size: 100%;
-                    padding-top: 0px;
-                    height: 33px;
-                    width: 110px;
+            .nav_elems {
+                float: right;
 
-                    &:hover {
-                        background-image: url('/images/wedding_white.png');
+                .nav_elem {
+                    padding: 5px 0;
+                    display: block;
+
+                    &.wedding {
+                        background: url('/images/wedding_yellow.png') no-repeat center;
+                        background-size: 100%;
+                        padding-top: 0px;
+                        height: 33px;
+                        width: 110px;
+
+                        &:hover {
+                            background-image: url('/images/wedding_white.png');
+                        }
                     }
-                }
 
-                &.rsvp {
-                    background: url('/images/rsvp_yellow.png') no-repeat center;
-                    background-size: 100%;
-                    width: 58px;
-                    height: 24px;
+                    &.rsvp {
+                        background: url('/images/rsvp_yellow.png') no-repeat center;
+                        background-size: 100%;
+                        width: 58px;
+                        height: 24px;
 
-                    &:hover {
-                        background-image: url('/images/rsvp_white.png');
+                        &:hover {
+                            background-image: url('/images/rsvp_white.png');
+                        }
                     }
-                }
 
-                &.registry {
-                    background: url('/images/registry_yellow.png') no-repeat center;
-                    background-size: 100%;
-                    padding-bottom: 0px;
-                    height: 31px;
-                    width: 100px;
+                    &.registry {
+                        background: url('/images/registry_yellow.png') no-repeat center;
+                        background-size: 100%;
+                        padding-bottom: 0px;
+                        height: 31px;
+                        width: 100px;
 
-                    &:hover {
-                        background-image: url('/images/registry_white.png');
+                        &:hover {
+                            background-image: url('/images/registry_white.png');
+                        }
                     }
                 }
             }
@@ -74,10 +79,27 @@ html, body {
     }
 
     .footer {
-        height: 50px;
-        width: 100%;
         background: @wedding_blue;
-        margin-top: 100px;
+        height: 50px;
+        padding: 5px 20px;
+
+        .hero {
+            background: url('/images/footer_hero.png') no-repeat center;
+            height: inherit;
+            width: 250px;
+            background-size: 100%;
+            float: left;
+            display: block;
+        }
+
+        .date {
+            background: url('/images/footer_date.png') no-repeat center;
+            height: inherit;
+            width: 180px;
+            margin-top: 3px;
+            background-size: 100%;
+            float: right;
+        }
     }
 
     &.welcome {
