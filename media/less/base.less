@@ -7,6 +7,42 @@ html, body {
 
 @wedding_blue: rgba(86, 100, 132, 0.85);
 .section {
+    .nav {
+        @media (max-width: 800px) {
+            font-size: 20px;
+        }
+        @media (min-width: 800px) and ( max-width: 1200px) {
+            font-size: 30px;
+        }
+        width: 100%;
+        padding: 20px 0;
+        background-color: @wedding_blue;
+        color: #F2CC37;
+        font-size: 40px;
+        font-weight: bold;
+        text-align: center;
+
+        .nav_elem {
+            @media (max-width: 800px) {
+                padding: 0 30px;
+            }
+            @media (min-width: 800px) and ( max-width: 1200px) {
+                padding: 0 85px;
+            }
+            display: inline-block;
+            padding: 0 130px;
+            cursor: pointer;
+
+            a {
+                color: inherit;
+                text-decoration: none;
+            }
+
+            &:hover {
+                color: #efefef;
+            }
+        }
+    }
 
     &.welcome {
         background: url('/images/welcome.jpg') no-repeat center;
@@ -24,42 +60,6 @@ html, body {
             background-size: 70%;
         }
 
-        .nav {
-            @media (max-width: 800px) {
-                font-size: 20px;
-            }
-            @media (min-width: 800px) and ( max-width: 1200px) {
-                font-size: 30px;
-            }
-            width: 100%;
-            padding: 20px 0;
-            background-color: @wedding_blue;
-            color: #F2CC37;
-            font-size: 40px;
-            font-weight: bold;
-            text-align: center;
-
-            .nav_elem {
-                @media (max-width: 800px) {
-                    padding: 0 30px;
-                }
-                @media (min-width: 800px) and ( max-width: 1200px) {
-                    padding: 0 85px;
-                }
-                display: inline-block;
-                padding: 0 130px;
-                cursor: pointer;
-
-                a {
-                    color: inherit;
-                    text-decoration: none;
-                }
-
-                &:hover {
-                    color: #efefef;
-                }
-            }
-        }
 
         .footer {
             height: 50px;
@@ -74,43 +74,6 @@ html, body {
         background: url('/images/field.jpg') no-repeat center;
         background-size: cover;
         width: 100%;
-
-        .nav {
-            @media (max-width: 800px) {
-                font-size: 20px;
-            }
-            @media (min-width: 800px) and ( max-width: 1200px) {
-                font-size: 30px;
-            }
-            width: 100%;
-            padding: 20px 0;
-            background-color: @wedding_blue;
-            color: #F2CC37;
-            font-size: 40px;
-            font-weight: bold;
-            text-align: center;
-
-            .nav_elem {
-                @media (max-width: 800px) {
-                    padding: 0 30px;
-                }
-                @media (min-width: 800px) and ( max-width: 1200px) {
-                    padding: 0 85px;
-                }
-                display: inline-block;
-                padding: 0 130px;
-                cursor: pointer;
-
-                a {
-                    color: inherit;
-                    text-decoration: none;
-                }
-
-                &:hover {
-                    color: #efefef;
-                }
-            }
-        }
 
         .footer {
             height: 50px;
@@ -163,42 +126,6 @@ html, body {
         font-size: 20px;
         font-weight: bold;
         background-color: @wedding_blue;
-
-        .nav {
-            @media (max-width: 800px) {
-                font-size: 20px;
-            }
-            @media (min-width: 800px) and ( max-width: 1200px) {
-                font-size: 30px;
-            }
-            width: 100%;
-            padding: 20px 0;
-            color: #F2CC37;
-            font-size: 40px;
-            font-weight: bold;
-            text-align: center;
-
-            .nav_elem {
-                @media (max-width: 800px) {
-                    padding: 0 30px;
-                }
-                @media (min-width: 800px) and ( max-width: 1200px) {
-                    padding: 0 85px;
-                }
-                display: inline-block;
-                padding: 0 130px;
-                cursor: pointer;
-
-                a {
-                    color: inherit;
-                    text-decoration: none;
-                }
-
-                &:hover {
-                    color: #efefef;
-                }
-            }
-        }
 
         .barn {
             background: url('/images/barn.jpg') no-repeat center;
@@ -317,58 +244,8 @@ html, body {
                 resize: none;
             }
         }
-
-        .footer {
-            height: 50px;
-            width: 100%;
-            background: @wedding_blue;
-        }
     }
 
     &.registry {
-        .nav {
-            @media (max-width: 800px) {
-                font-size: 20px;
-            }
-            @media (min-width: 800px) and ( max-width: 1200px) {
-                font-size: 30px;
-            }
-            background-color: @wedding_blue;
-            width: 100%;
-            padding: 20px 0;
-            color: #F2CC37;
-            font-size: 40px;
-            font-weight: bold;
-            text-align: center;
-
-            .nav_elem {
-                @media (max-width: 800px) {
-                    padding: 0 30px;
-                }
-                @media (min-width: 800px) and ( max-width: 1200px) {
-                    padding: 0 85px;
-                }
-                display: inline-block;
-                padding: 0 130px;
-                cursor: pointer;
-
-                a {
-                    color: inherit;
-                    text-decoration: none;
-                }
-
-                &:hover {
-                    color: #efefef;
-                }
-            }
-        }
-
-        .footer {
-            height: 50px;
-            width: 100%;
-            background: @wedding_blue;
-            position: absolute;
-            bottom: 0;
-        }
     }
 }
