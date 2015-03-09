@@ -1,10 +1,10 @@
 #!/bin/sh
 
-LOG=backup_log
+BACKUP=backup.sql
 
-if [ ! -f "$LOG" ]
+if [ ! -f "$BACKUP" ]
 then
-    touch $LOG
+    touch $BACKUP
 fi
 
-echo "backup" >> $LOG
+$BACKUP < mysqldump -u root hoyoswelch
