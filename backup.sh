@@ -7,4 +7,4 @@ then
     touch $BACKUP
 fi
 
-$BACKUP < mysqldump -u root hoyoswelch
+mysqldump -u root hoyoswelch -r $BACKUP
