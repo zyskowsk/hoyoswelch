@@ -7,41 +7,77 @@ html, body {
 
 @wedding_blue: rgba(86, 100, 132, 0.85);
 .section {
+    .clearfix::after {
+        content: ' ';
+        display: block;
+        height: 0;
+        clear: both;
+    }
+
     .nav {
-        @media (max-width: 800px) {
-            font-size: 20px;
-        }
-        @media (min-width: 800px) and ( max-width: 1200px) {
-            font-size: 30px;
-        }
-        width: 100%;
-        padding: 20px 0;
         background-color: @wedding_blue;
-        color: #F2CC37;
-        font-size: 40px;
-        font-weight: bold;
+        padding: 15px;
         text-align: center;
 
-        .nav_elem {
-            @media (max-width: 800px) {
-                padding: 0 30px;
-            }
-            @media (min-width: 800px) and ( max-width: 1200px) {
-                padding: 0 85px;
-            }
-            display: inline-block;
-            padding: 0 130px;
-            cursor: pointer;
+        .hero {
+            background: url('/images/hero.jpg') no-repeat center;
+            height:115px;
+            width:500px;
+            background-size: 100%;
+            float: left;
+            display: block;
+        }
 
-            a {
-                color: inherit;
-                text-decoration: none;
-            }
+        .nav_elems {
+            float: right;
 
-            &:hover {
-                color: #efefef;
+            .nav_elem {
+                padding: 5px 0;
+                display: block;
+
+                &.wedding {
+                    background: url('/images/wedding_yellow.png') no-repeat center;
+                    background-size: 100%;
+                    padding-top: 0px;
+                    height: 33px;
+                    width: 110px;
+
+                    &:hover {
+                        background-image: url('/images/wedding_white.png');
+                    }
+                }
+
+                &.rsvp {
+                    background: url('/images/rsvp_yellow.png') no-repeat center;
+                    background-size: 100%;
+                    width: 58px;
+                    height: 24px;
+
+                    &:hover {
+                        background-image: url('/images/rsvp_white.png');
+                    }
+                }
+
+                &.registry {
+                    background: url('/images/registry_yellow.png') no-repeat center;
+                    background-size: 100%;
+                    padding-bottom: 0px;
+                    height: 31px;
+                    width: 100px;
+
+                    &:hover {
+                        background-image: url('/images/registry_white.png');
+                    }
+                }
             }
         }
+    }
+
+    .footer {
+        height: 50px;
+        width: 100%;
+        background: @wedding_blue;
+        margin-top: 100px;
     }
 
     &.welcome {
@@ -49,6 +85,13 @@ html, body {
         background-size: cover;
         height: 100%;
         width: 100%;
+
+        .nav {
+            .hero {
+                pointer-events: none;
+                cursor: default;
+            }
+        }
 
         .banner {
             @media (max-width: 800px) {height: 70px;}
@@ -59,27 +102,21 @@ html, body {
             background-color: @wedding_blue;
             background-size: 70%;
         }
-
-
-        .footer {
-            height: 50px;
-            width: 100%;
-            background: @wedding_blue;
-            position: absolute;
-            bottom: 0;
-        }
     }
 
     &.wedding {
         background: url('/images/field.jpg') no-repeat center;
         background-size: cover;
         width: 100%;
-
-        .footer {
-            height: 50px;
-            width: 100%;
-            background: @wedding_blue;
-            margin-top: 100px;
+        
+        .nav {
+            .nav_elems {
+                .wedding {
+                    background-image: url('/images/wedding_white.png');
+                    pointer-events: none;
+                    cursor: default;
+                }
+            }
         }
 
         .info {
@@ -126,6 +163,16 @@ html, body {
         font-size: 20px;
         font-weight: bold;
         background-color: @wedding_blue;
+
+        .nav {
+            .nav_elems {
+                .rsvp {
+                    background-image: url('/images/rsvp_white.png');
+                    pointer-events: none;
+                    cursor: default;
+                }
+            }
+        }
 
         .barn {
             background: url('/images/barn.jpg') no-repeat center;
@@ -247,5 +294,14 @@ html, body {
     }
 
     &.registry {
+        .nav {
+            .nav_elems {
+                .registry {
+                    background-image: url('/images/registry_white.png');
+                    pointer-events: none;
+                    cursor: default;
+                }
+            }
+        }
     }
 }
