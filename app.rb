@@ -68,19 +68,19 @@ class App < Sinatra::Base
 
 
     get '/' do
-        erb :welcome
+        erb :welcome, :layout => :base
     end
 
     get '/wedding' do
-        erb :wedding
+        erb :wedding, :layout => :base
     end
 
     get '/rsvp' do
-        erb :rsvp
+        erb :rsvp, :layout => :base
     end
 
     get '/registry' do
-        erb :registry
+        erb :registry, :layout => :base
     end
 
     get '/guests' do
