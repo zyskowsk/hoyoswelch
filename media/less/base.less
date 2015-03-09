@@ -60,13 +60,20 @@ html, body {
                 }
             }
         }
+
+        .footer {
+            height: 50px;
+            width: 100%;
+            background: @wedding_blue;
+            position: absolute;
+            bottom: 0;
+        }
     }
 
     &.wedding {
         background: url('/images/field.jpg') no-repeat center;
         background-size: cover;
         width: 100%;
-        padding-bottom: 100px;
 
         .nav {
             @media (max-width: 800px) {
@@ -103,6 +110,13 @@ html, body {
                     color: #efefef;
                 }
             }
+        }
+
+        .footer {
+            height: 50px;
+            width: 100%;
+            background: @wedding_blue;
+            margin-top: 100px;
         }
 
         .info {
@@ -303,6 +317,12 @@ html, body {
                 resize: none;
             }
         }
+
+        .footer {
+            height: 50px;
+            width: 100%;
+            background: @wedding_blue;
+        }
     }
 
     &.registry {
@@ -341,6 +361,14 @@ html, body {
                     color: #efefef;
                 }
             }
+        }
+
+        .footer {
+            height: 50px;
+            width: 100%;
+            background: @wedding_blue;
+            position: absolute;
+            bottom: 0;
         }
     }
 }
