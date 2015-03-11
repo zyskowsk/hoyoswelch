@@ -200,6 +200,18 @@ html, body {
         font-weight: bold;
         background-color: @wedding_blue;
         background: url('/images/barn.jpg') no-repeat center;
+        background-size: cover;
+        height: 100%;
+        width: 100%;
+
+        @media (min-width: 2000px) {
+            .footer {
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                left: 0;
+            }
+        }
 
         .nav .width_wrapper .nav_elems .rsvp {
             background-image: url('/images/rsvp_white.png');
