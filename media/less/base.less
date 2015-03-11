@@ -5,6 +5,7 @@ html, body {
     padding: 0;
     height: 100%;
     width: 100%;
+    min-width: 1000px;
 }
 
 @wedding_blue: rgba(86, 100, 132, 0.85);
@@ -124,8 +125,6 @@ html, body {
         }
 
         .banner {
-            @media (max-width: 800px) {height: 70px;}
-            @media (max-width: 1200px) {height: 300px;}
             width: 100%;
             height: 200px;
             background: url('/images/nick_ana.png') no-repeat center;
@@ -141,6 +140,15 @@ html, body {
         min-height: 100%;
         font-family: raleway;
         
+        @media (min-width: 2000px) {
+            .footer {
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                left: 0;
+            }
+        }
+
         .nav .width_wrapper .nav_elems .wedding {
             background-image: url('/images/wedding_white.png');
             pointer-events: none;
