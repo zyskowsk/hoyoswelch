@@ -141,18 +141,14 @@ html, body {
         min-height: 100%;
         font-family: raleway;
         
-        .nav {
-            .nav_elems {
-                .wedding {
-                    background-image: url('/images/wedding_white.png');
-                    pointer-events: none;
-                    cursor: default;
-                }
-            }
+        .nav .width_wrapper .nav_elems .wedding {
+            background-image: url('/images/wedding_white.png');
+            pointer-events: none;
+            cursor: default;
         }
 
         .info {
-            margin: 60px 0 60px 100px;
+            margin: 60px 140px;
             background-color: @wedding_blue;
             font-size: 18px;
             color: white;
@@ -195,14 +191,10 @@ html, body {
         font-weight: bold;
         background-color: @wedding_blue;
 
-        .nav {
-            .nav_elems {
-                .rsvp {
-                    background-image: url('/images/rsvp_white.png');
-                    pointer-events: none;
-                    cursor: default;
-                }
-            }
+        .nav .width_wrapper .nav_elems .rsvp {
+            background-image: url('/images/rsvp_white.png');
+            pointer-events: none;
+            cursor: default;
         }
 
         .barn {
@@ -325,14 +317,14 @@ html, body {
     }
 
     &.registry {
-        .nav {
-            .nav_elems {
-                .registry {
-                    background-image: url('/images/registry_white.png');
-                    pointer-events: none;
-                    cursor: default;
-                }
-            }
+        .nav .width_wrapper .nav_elems .registry {
+            background-image: url('/images/registry_white.png');
+            pointer-events: none;
+            cursor: default;
+        }
+
+        .registry_container {
+            margin-top: 50px;
         }
     }
 }
