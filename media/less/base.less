@@ -34,10 +34,13 @@ html, body {
 
             .nav_elems {
                 float: right;
+                position: relative;
 
                 .nav_elem {
                     padding: 5px 0;
                     display: block;
+                    position: absolute;
+                    right: 0;
 
                     &.wedding {
                         background: url('/images/wedding_yellow.png') no-repeat center;
@@ -45,6 +48,7 @@ html, body {
                         padding-top: 0px;
                         height: 33px;
                         width: 110px;
+                        top: 5px;
 
                         &:hover {
                             background-image: url('/images/wedding_white.png');
@@ -56,6 +60,7 @@ html, body {
                         background-size: 100%;
                         width: 58px;
                         height: 24px;
+                        top: 46px;
 
                         &:hover {
                             background-image: url('/images/rsvp_white.png');
@@ -68,6 +73,7 @@ html, body {
                         padding-bottom: 0px;
                         height: 31px;
                         width: 100px;
+                        top: 75px;
 
                         &:hover {
                             background-image: url('/images/registry_white.png');
