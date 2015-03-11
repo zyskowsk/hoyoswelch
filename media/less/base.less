@@ -9,6 +9,7 @@ html, body {
 }
 
 @wedding_blue: rgba(86, 100, 132, 0.85);
+@light_wedding_blue: rgba(86, 100, 132, 0.55);
 .section {
     .clearfix::after {
         content: ' ';
@@ -198,18 +199,12 @@ html, body {
         font-size: 20px;
         font-weight: bold;
         background-color: @wedding_blue;
+        background: url('/images/barn.jpg') no-repeat center;
 
         .nav .width_wrapper .nav_elems .rsvp {
             background-image: url('/images/rsvp_white.png');
             pointer-events: none;
             cursor: default;
-        }
-
-        .barn {
-            background: url('/images/barn.jpg') no-repeat center;
-            background-size: cover;
-            height: 1000px;
-            width: 100%;
         }
 
         .flash {
@@ -320,6 +315,7 @@ html, body {
                 width: 100%;
                 height: 80px;
                 resize: none;
+                background: @light_wedding_blue;
             }
         }
     }
