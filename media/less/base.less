@@ -1,3 +1,5 @@
+@import url(http://fonts.googleapis.com/css?family=Raleway);
+
 html, body {
     margin: 0;
     padding: 0;
@@ -16,11 +18,10 @@ html, body {
 
     .nav {
         background-color: @wedding_blue;
-        padding: 15px;
+        padding: 15px 140px;
         text-align: center;
 
         .width_wrapper {
-            max-width: 1500px;
             margin: 0px auto;
 
             .hero {
@@ -87,7 +88,8 @@ html, body {
     .footer {
         background: @wedding_blue;
         height: 50px;
-        padding: 5px 20px;
+        padding: 5px 140px;
+
 
         .hero {
             background: url('/images/footer_hero.png') no-repeat center;
@@ -136,6 +138,8 @@ html, body {
         background: url('/images/field.jpg') no-repeat center;
         background-size: cover;
         width: 100%;
+        min-height: 100%;
+        font-family: raleway;
         
         .nav {
             .nav_elems {
@@ -155,7 +159,6 @@ html, body {
             padding: 40px;
             a {
                 color: white;
-                text-decoration: none;
                 font-weight: bold;
                 &:hover {
                     color: #F2CC37;
@@ -220,6 +223,8 @@ html, body {
         }
 
         #rsvp_form {
+            padding: 60px 140px;
+
             #map {
                 height: 400px;
                 width: 100%;
@@ -227,8 +232,6 @@ html, body {
                 margin-bottom: 50px;
                 margin-top: 10px;
             }
-
-            padding: 60px;
 
             label {
                 margin-right: 5px;
