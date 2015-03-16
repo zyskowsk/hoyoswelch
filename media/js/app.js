@@ -11,57 +11,12 @@ $(function () {
         return name && (attending_yes || attending_no)
     }
 
-    // Plus one input
-    $('#num_guests').change(function (event) {
-        var $guest_names_container = $('.guest_names_container');
-        var val = parseInt($(event.target).val(), 10);
-        var num_guests = function () { return $guest_names_container.find('.block').length; }
-        var prototype = '' +
-            '<div class="block">' +
-                '<label for="plus_one_name" class="plus_one_name">Guest name</label>' +
-                '<input type="text" id="plus_one_name" name="plus_ones[]" />' +
-            '</div>'
-
-        if (val === 1) {
-            $('.guests_copy').html('guest');
-        } else {
-            $('.guests_copy').html('guests');
-        }
-
-        if (val > num_guests()) {
-            while (num_guests() < val) {
-                $guest_names_container.append(prototype);
-            }
-        } else {
-            while (num_guests() > val) {
-                _.last($guest_names_container.find('.block')).remove();
-            }
-        }
-    });
-
     // Validate form
     $rsvp_form.submit(function (event) {
         if (!validate_form()) {
             event.preventDefault();
             $('.rsvp .flash').fadeIn(300);
         }
-    });
-
-    // Handle songs
-    $('.add_song').click(function (event) {
-        event.preventDefault();
-        var $song_container = $('.songs_container');
-        var prototype = '' +
-            '<div class="block">' +
-                '<input type="text" id="song_name" name="songs[]" />' +
-                '<button class="remove_song">x</button>' +
-            '</div>'
-
-        $song_container.append(prototype);
-        $('.remove_song').click(function (event) {
-            event.preventDefault();
-            $(event.target).parent().remove();
-        });
     });
 
     function add_locations(map) {

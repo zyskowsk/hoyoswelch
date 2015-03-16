@@ -10,32 +10,26 @@
         </div>
 
         <div class="block">
-            <label for="attending_yes" class="attending_yes">See you there</label>
+            <label for="attending_yes" class="attending_yes">Will attend</label>
             <input type="radio" id="attending_yes" value="true"  name="attending" />
 
-            <label for="attending_no" class="attending_no">Can't make it</label>
+            <input type="number" min="0" max="10" value="1" id="num_guests" name="num_guests" />
+            <label for="num_guests" class="num_guests guests_copy"># attending</label><br>
+        </div>
+
+        <div class="block">
+            <label for="attending_no" class="attending_no">Will not addend</label>
             <input type="radio" id="attending_no" value="false"  name="attending" /></br>
         </div>
 
-        <div class="block"
-            <label for="num_guests" class="num_guests">I am bringing</label>
-            <input type="number" min="0" max="10" value="1" id="num_guests" name="num_guests" />
-            <label for="num_guests" class="num_guests guests_copy">guest</label><br>
+        <div class="block">
+            <label for="guest_name" class="guest_name">Guest name(s)</label></br>
+            <textarea id="guest_name" name="guest_name"></textarea></br>
         </div>
 
-        <div class="guest_names_container">
-            <div class="block">
-                <label for="plus_one_name_" class="plus_one_name first">Guest name</label>
-                <input type="text" id="plus_one_name" name="plus_ones[]" />
-            </div>
-        </div>
-
-        <label>Suggest a song</label>
-        <div class="songs_container">
-            <div class="block">
-                <input type="text" id="song_name" class="first_song" name="songs[]" />
-                <button class="add_song">+</button>
-            </div>
+        <div class="block">
+            <label for="songs" class="songs">Suggest a song</label></br>
+            <textarea id="songs" name="songs"></textarea></br>
         </div>
 
         <div class="block">
