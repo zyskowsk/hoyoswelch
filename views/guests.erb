@@ -3,17 +3,10 @@
     <div>attending: <%=guest.attending%></div>
     <div>number of guests: <%=guest.num_guests%></div>
     <div>advice: <%=guest.advice%></div>
+    <div>guest names: <%=guest.guest_name%></div>
+    <div>songs: <%=guest.songs%></div>
     <div>latlng: <%=guest.location%></div>
 
-    <div>Plus ones:<div>
-    <% guest.plus_ones.each do |plus_one| %>
-        <div>-<%=plus_one.name%></div>
-    <% end %>
-
-    <div>Songs:<div>
-    <% guest.songs.each do |song| %>
-        <div>-<%=song.name%></div>
-    <% end %>
 
     <div>--------------------------------------------------</div>
 <% end %>

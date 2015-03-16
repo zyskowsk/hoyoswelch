@@ -5,12 +5,12 @@
     </div>
     <form id="rsvp_form"  method="post" action="/submit">
         <div class="block">
-            <label for="name" class="name">My name is</label>
+            <label for="name" class="name">name</label>
             <input type="text" id="name" name="name" /></br>
         </div>
 
         <div class="block">
-            <label for="attending_yes" class="attending_yes">Will attend</label>
+            <label for="attending_yes" class="attending_yes">will attend</label>
             <input type="radio" id="attending_yes" value="true"  name="attending" />
 
             <input type="number" min="0" max="10" value="1" id="num_guests" name="num_guests" />
@@ -18,26 +18,26 @@
         </div>
 
         <div class="block">
-            <label for="attending_no" class="attending_no">Will not addend</label>
+            <label for="attending_no" class="attending_no">will not addend</label>
             <input type="radio" id="attending_no" value="false"  name="attending" /></br>
         </div>
 
         <div class="block">
-            <label for="guest_name" class="guest_name">Guest name(s)</label></br>
+            <label for="guest_name" class="guest_name">guest name (s)</label></br>
             <textarea id="guest_name" name="guest_name"></textarea></br>
         </div>
 
         <div class="block">
-            <label for="songs" class="songs">Suggest a song</label></br>
+            <label for="songs" class="songs">suggest a song</label></br>
             <textarea id="songs" name="songs"></textarea></br>
         </div>
 
         <div class="block">
-            <label for="advice" class="advice">Advice for us</label></br>
+            <label for="advice" class="advice">advice for us</label></br>
             <textarea id="advice" name="advice"></textarea></br>
         </div>
 
-        <label>Where are you coming from?</label>
+        <label>where are you coming from?</label>
         <div id="map"></div>
         <input type="hidden" name="location" class="latlng" />
 
