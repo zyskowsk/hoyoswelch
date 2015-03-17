@@ -12,7 +12,7 @@ $(function () {
     }
 
     // Error message
-    $(document).on('scroll', function (hi) {
+    $(document).on('scroll', function () {
         var top = Math.max($('.nav').outerHeight(), $(window).scrollTop());
         $('.flash').css('top', top);
     });
@@ -20,6 +20,25 @@ $(function () {
     $('.cancel').click(function () {
         $('.flash').fadeOut(300);
     });
+
+    // Registry page
+    var wait_for_iframe = function () {
+        $('.footer').hide();
+        $('.registry_container').hide();
+
+        interval = setInterval(function () {
+            $('iframe').load(function () {
+                $('.spinner').hide();
+                $('.footer').show();
+                $('.registry_container').show();
+                clearInterval(interval);
+            });
+        }, 10);
+    }
+
+    if (window.location.pathname === '/registry') {
+        wait_for_iframe();
+    }
 
     // Validate form
     $rsvp_form.submit(function (event) {

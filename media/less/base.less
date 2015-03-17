@@ -123,6 +123,10 @@ html, body {
                 pointer-events: none;
                 cursor: default;
             }
+
+            .nav_elems {
+                margin-right: 15px;
+            }
         }
 
         .banner {
@@ -358,10 +362,23 @@ html, body {
     }
 
     &.registry {
-        .nav .width_wrapper .nav_elems .registry {
-            background-image: url('/images/registry_white.png');
-            pointer-events: none;
-            cursor: default;
+
+        .spinner {
+            background-image: url('/images/spinner.png');
+            height: 256px;
+            width: 256px;
+            margin: 0px auto;
+            margin-top: 200px;
+        }
+
+        .nav .width_wrapper {
+            .nav_elems {
+                .registry {
+                    background-image: url('/images/registry_white.png');
+                    pointer-events: none;
+                    cursor: default;
+                }
+            }
         }
 
         .registry_container {
