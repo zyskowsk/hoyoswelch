@@ -11,6 +11,16 @@ $(function () {
         return name && (attending_yes || attending_no)
     }
 
+    // Error message
+    $(document).on('scroll', function (hi) {
+        var top = Math.max($('.nav').outerHeight(), $(window).scrollTop());
+        $('.flash').css('top', top);
+    });
+
+    $('.cancel').click(function () {
+        $('.flash').fadeOut(300);
+    });
+
     // Validate form
     $rsvp_form.submit(function (event) {
         if (!validate_form()) {
