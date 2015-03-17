@@ -28,6 +28,7 @@ $(function () {
 
         interval = setInterval(function () {
             $('iframe').load(function () {
+                $('.nav_elems').css('margin-right', 0);
                 $('.spinner').hide();
                 $('.footer').show();
                 $('.registry_container').show();
