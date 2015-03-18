@@ -27,8 +27,8 @@ end
 DataMapper.auto_migrate!
 
 class App < Sinatra::Base
+    enable :sessions
     set :root, File.dirname(__FILE__)
-
     register Sinatra::AssetPack
 
     assets {
@@ -50,7 +50,9 @@ class App < Sinatra::Base
 
 
     get '/' do
-        erb :welcome, :layout => :base
+        erb :welcome, :layout => :base, :locals => {
+            :attending => session[:attending]
+        }
     end
 
     get '/wedding' do
@@ -77,18 +79,20 @@ class App < Sinatra::Base
     end
 
     post '/submit' do
+        attending = params[:attending]
         @guest = Guest.create(
-            :name       => params['name'],
-            :attending  => params['attending'],
-            :num_guests => params['num_guests'],
-            :guest_name => params['guest_name'],
-            :songs      => params['songs'],
-            :advice     => params['advice'],
-            :location   => params['location'],
+            :name       => params[:name],
+            :attending  => attending,
+            :num_guests => params[:num_guests],
+            :guest_name => params[:guest_name],
+            :songs      => params[:songs],
+            :advice     => params[:advice],
+            :location   => params[:location],
             :created_at => Time.now
         )
 
-        erb :thank_you, :locals => {:name => params['name']}
+        session[:attending] = attending
+        redirect to('/')
     end
 
     run! if __FILE__ == $0
