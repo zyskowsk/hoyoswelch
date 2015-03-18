@@ -1,6 +1,8 @@
 <div class="section welcome">
     <%= erb :nav %>
-    <% if attending %>
-        HELLO
+    <% if attending == 'true' %>
+        <div class="attending flash"></div>
+    <% elsif attending == 'false' %>
+        <div class="not_attending flash"></div>
     <% end %>
 </div>

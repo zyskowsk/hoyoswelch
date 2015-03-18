@@ -50,8 +50,10 @@ class App < Sinatra::Base
 
 
     get '/' do
+        attending = session[:attending]
+        session.clear
         erb :welcome, :layout => :base, :locals => {
-            :attending => session[:attending]
+            :attending => attending
         }
     end
 
@@ -92,6 +94,7 @@ class App < Sinatra::Base
         )
 
         session[:attending] = attending
+        session[:show_flash] = true
         redirect to('/')
     end
 

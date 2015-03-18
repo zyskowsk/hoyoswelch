@@ -46,6 +46,8 @@ $(function () {
         if (!validate_form()) {
             event.preventDefault();
             $('.rsvp .flash').fadeIn(300);
+        } else {
+            $('.spinner').css('visibility', 'visible');
         }
     });
 

@@ -1,5 +1,18 @@
 @import url(http://fonts.googleapis.com/css?family=Raleway);
 
+body:before {
+    display: none;
+    content: url('/images/hero.png')
+             url('/images/wedding_yellow.png')
+             url('/images/rsvp_yellow.png')
+             url('/images/registry_yellow.png')
+             url('/images/wedding_white.png')
+             url('/images/rsvp_white.png')
+             url('/images/registry_white.png')
+             url('/images/attending_flash.png')
+             url('/images/not_attending_flash.png')
+}
+
 html, body {
     margin: 0;
     padding: 0;
@@ -126,6 +139,28 @@ html, body {
 
             .nav_elems {
                 margin-right: 15px;
+            }
+        }
+
+        .flash {
+            height: 229px;
+            width: 572px;
+            padding: 40px;
+            border: 5px solid rgb(104, 121, 148);
+            margin: 0px auto;
+            margin-top: 80px;
+
+            &.attending {
+                background: url('/images/attending_flash.png') no-repeat center;
+                background-color: rgba(232, 183, 162, 0.9);
+                background-size: cover;
+            }
+
+            &.not_attending {
+                background: url('/images/not_attending_flash.png') no-repeat center;
+                width: 662px;
+                background-color: rgba(232, 183, 162, 0.9);
+                background-size: cover;
             }
         }
 
@@ -261,6 +296,17 @@ html, body {
             color: white;
             padding: 40px;
 
+            .spinner {
+                background-image: url('/images/spinner.gif');
+                height: 20px;
+                width: 20px;
+                margin-top: 5px;
+                margin-right: 5px;
+                background-size: cover;
+                display: inline-block;
+                visibility: hidden;
+            }
+
             #map {
                 height: 400px;
                 width: 100%;
@@ -309,6 +355,7 @@ html, body {
                 background: white;
                 padding: 0px 4px 2px 4px;
                 outline: none;
+                float: left;
 
                 &.submit {
                     padding: 5px 10px;
@@ -365,9 +412,10 @@ html, body {
 
         .spinner {
             background-image: url('/images/spinner.gif');
-            height: 256px;
-            width: 256px;
+            height: 150px;
+            width: 150px;
             margin: 0px auto;
+            background-size: cover;
             margin-top: 100px;
         }
 
