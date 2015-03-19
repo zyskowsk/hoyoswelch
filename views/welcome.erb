@@ -1,8 +1,21 @@
 <div class="section welcome">
     <%= erb :nav %>
     <% if attending == 'true' %>
-        <div class="attending flash"></div>
+        <div class="flash_background">
+            <div class="attending flash">
+                <div class="close">X</div>
+            </div>
+        </div>
     <% elsif attending == 'false' %>
-        <div class="not_attending flash"></div>
+        <div class="flash_background">
+            <div class="not_attending flash">
+                <div class="close">X</div>
+            </div>
+        </div>
     <% end %>
+
+    <div class="copy">
+        We are elated to be getting married, and we hope you can join us to celebrate. We are very grateful each of you is a part of our lives. Thank you for your love and support. 
+        Use the links above for information about the wedding. Please RSVP by May 16. 
+    </div>
 </div>

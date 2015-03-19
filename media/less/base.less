@@ -15,7 +15,7 @@ html, body {
     padding: 0;
     height: 100%;
     width: 100%;
-    min-width: 1000px;
+    min-width: 1200px;
 }
 
 @wedding_blue: rgba(86, 100, 132, 0.85);
@@ -127,6 +127,7 @@ html, body {
         background-size: cover;
         height: 100%;
         width: 100%;
+        font-family: raleway;
 
         .nav {
             .hero {
@@ -138,26 +139,60 @@ html, body {
                 margin-right: 15px;
             }
         }
-
-        .flash {
-            height: 229px;
-            width: 572px;
+        
+        .copy {
+            margin: 60px 140px;
+            background-color: @wedding_blue;
+            font-size: 18px;
+            color: white;
             padding: 40px;
-            border: 5px solid rgb(104, 121, 148);
-            margin: 0px auto;
-            margin-top: 80px;
+        }
 
-            &.attending {
-                background: url('/images/attending_flash.png') no-repeat center;
-                background-color: rgba(232, 183, 162, 0.9);
-                background-size: cover;
-            }
+        .flash_background {
+            background: @wedding_blue;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            
+            .flash {
+                height: 229px;
+                width: 572px;
+                padding: 40px;
+                border: 5px solid rgb(104, 121, 148);
+                margin: 0px auto;
+                margin-top: 80px;
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
+                -webkit-transform-transform: translateX(-50%);
 
-            &.not_attending {
-                background: url('/images/not_attending_flash.png') no-repeat center;
-                width: 662px;
-                background-color: rgba(232, 183, 162, 0.9);
-                background-size: cover;
+                .close {
+                    position: absolute;
+                    top: 10px;
+                    right: 10px;
+                    font-weight: bold;
+                    color: @wedding_blue;
+
+                    &:hover {
+                        color: #efefef;
+                        cursor: pointer;
+                    }
+                }
+
+                &.attending {
+                    background: url('/images/attending_flash.png') no-repeat center;
+                    background-color: rgba(232, 183, 162, 0.9);
+                    background-size: cover;
+                }
+
+                &.not_attending {
+                    background: url('/images/not_attending_flash.png') no-repeat center;
+                    width: 662px;
+                    background-color: rgba(232, 183, 162, 0.9);
+                    background-size: cover;
+                }
             }
         }
 

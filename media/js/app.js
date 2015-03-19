@@ -11,14 +11,20 @@ $(function () {
         return name && (attending_yes || attending_no)
     }
 
-    // Error message
+    // Welcom flash
+    
+    $('.welcome .flash .close').click(function () {
+        $('.welcome .flash_background').fadeOut(200);
+    });
+
+    // RSVP Error message
     $(document).on('scroll', function () {
         var top = Math.max($('.nav').outerHeight(), $(window).scrollTop());
         $('.flash').css('top', top);
     });
 
-    $('.cancel').click(function () {
-        $('.flash').fadeOut(300);
+    $('.rsvp .cancel').click(function () {
+        $('.flash').fadeOut(200);
     });
 
     // Registry page
@@ -45,7 +51,7 @@ $(function () {
     $rsvp_form.submit(function (event) {
         if (!validate_form()) {
             event.preventDefault();
-            $('.rsvp .flash').fadeIn(300);
+            $('.rsvp .flash').fadeIn(200);
         } else {
             $('.spinner').css('visibility', 'visible');
         }
