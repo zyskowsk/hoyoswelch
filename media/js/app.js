@@ -58,6 +58,7 @@ $(function () {
         }
 
         $rsvp_form.submit(function (event) {
+            mixpanel.track('RSVP Form Submitted');
             if (!validate_form()) {
                 event.preventDefault();
                 $('.rsvp .flash').fadeIn(200);
@@ -67,7 +68,7 @@ $(function () {
         });
 
         function add_locations(map) {
-            $.get('/locations', function (response) {
+            $.get('/locations?secret=eert432dff', function (response) {
                 response.forEach(function (location) {
                     latlng = location.replace(/[()\ ]/g, '').split(',');
                     new google.maps.Marker({

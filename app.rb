@@ -81,10 +81,17 @@ class App < Sinatra::Base
     end
 
     get '/locations' do
+        secret = params[:secret]
         content_type :json
-        Guest.all.map do |guest|
-            guest.location
-        end.to_json
+        if secret == 'eert432dff'
+            locations =Guest.all.map do |guest|
+                guest.location if !guest.location.empty?
+            end.compact
+
+            locations.to_json
+        else
+            halt 403
+        end
     end
 
     post '/submit' do
