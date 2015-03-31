@@ -24,7 +24,7 @@ class Guest
     property :location,   String
     property :created_at, DateTime
 end
-DataMapper.auto_upgrade!
+DataMapper.finalize
 
 class App < Sinatra::Base
     enable :sessions
@@ -70,7 +70,14 @@ class App < Sinatra::Base
     end
 
     get '/guests' do
-        erb :guests, :locals => {:guests => Guest.all}
+        attending_guests = Guest.all(:attending => true)
+        not_attending_guests = Guest.all(:attending => false)
+
+        erb :guests, :locals => {
+            :attending_guests => attending_guests,
+            :not_attending_guests => not_attending_guests,
+            :num_attending => attending_guests.inject(0) { |result, guest| result + guest.num_guests },
+        }
     end
 
     get '/locations' do
