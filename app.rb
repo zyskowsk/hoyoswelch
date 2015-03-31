@@ -24,7 +24,6 @@ class Guest
     property :location,   String
     property :created_at, DateTime
 end
-DataMapper.auto_migrate!
 
 class App < Sinatra::Base
     enable :sessions
