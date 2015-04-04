@@ -5,12 +5,7 @@ require 'data_mapper'
 require 'json'
 
 
-MYSQL_PW=''
-if ENV['TEST_ENV'] == 'prod'
-    MYSQL_PW = ':seattle';
-end
-
-DataMapper.setup(:default, "mysql://root#{MYSQL_PW}@localhost/hoyoswelch")
+DataMapper.setup(:default, "mysql://root:seattle@localhost/hoyoswelch")
 
 class Guest
     include DataMapper::Resource
