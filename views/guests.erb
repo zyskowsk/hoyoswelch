@@ -4,16 +4,18 @@
 
 <h2> Attending </h2>
 <% attending_guests.each do |guest| %>
-    <div>guest name: <%=guest.name%></div>
-    <div>number of guests: <%=guest.num_guests%></div>
-    <% if !guest.advice.empty? %>
-        <div>advice: <%=guest.advice%></div>
-    <% end %>
-    <% if !guest.guest_name.empty? %>
-        <div>guest names: <%=guest.guest_name%></div>
-    <% end %>
-    <% if !guest.songs.empty? %>
-        <div>songs: <%=guest.songs%></div>
+    <% if guest.name != 'Test Guest' %>
+        <div>guest name: <%=guest.name%></div>
+        <div>number of guests: <%=guest.num_guests%></div>
+        <% if !guest.advice.empty? %>
+            <div>advice: <%=guest.advice%></div>
+        <% end %>
+        <% if !guest.guest_name.empty? %>
+            <div>guest names: <%=guest.guest_name%></div>
+        <% end %>
+        <% if !guest.songs.empty? %>
+            <div>songs: <%=guest.songs%></div>
+        <% end %>
     <% end %>
 
     <br>
@@ -21,15 +23,17 @@
 
 <h2> Not Attending </h2>
 <% not_attending_guests.each do |guest| %>
-    <div>guest name: <%=guest.name%></div>
-    <% if !guest.advice.empty? %>
-        <div>advice: <%=guest.advice%></div>
-    <% end %>
-    <% if !guest.guest_name.empty? %>
-        <div>guest names: <%=guest.guest_name%></div>
-    <% end %>
-    <% if !guest.songs.empty? %>
-        <div>songs: <%=guest.songs%></div>
+    <% if guest.name != 'Test Guest' %>
+        <div>guest name: <%=guest.name%></div>
+        <% if !guest.advice.empty? %>
+            <div>advice: <%=guest.advice%></div>
+        <% end %>
+        <% if !guest.guest_name.empty? %>
+            <div>guest names: <%=guest.guest_name%></div>
+        <% end %>
+        <% if !guest.songs.empty? %>
+            <div>songs: <%=guest.songs%></div>
+        <% end %>
     <% end %>
 
     <br>
