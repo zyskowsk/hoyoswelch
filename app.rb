@@ -65,8 +65,8 @@ class App < Sinatra::Base
     end
 
     get '/guests' do
-        attending_guests = Guest.all(:attending => true)
-        not_attending_guests = Guest.all(:attending => false)
+        attending_guests = Guest.all(:attending => true, :name.not => 'Test Guest')
+        not_attending_guests = Guest.all(:attending => false, :name.not => 'Test Guest')
 
         erb :guests, :locals => {
             :attending_guests => attending_guests,
